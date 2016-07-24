@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" th:href="@{../css/app.css}" />
+
+	<title>Countries | add</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1><a th:href="@{/}">Countries of the World</a></h1>
+			<h3 class="notselected">add new country</h3>
+		</div>
+	</header>
+	<div class="container">
+		<div class="country-details">
+			<form action="#" th:action="@{/add}" th:object="${country}" method="post">
+
+				<label>Name:</label><input type="text" name="name" th:field="*{name}" required="required"/>
+				<label>Capital:</label><input type="text" name="capital" th:field="*{capital}" required="required"/>
+				<label>Population:</label><input type="number" name="population" th:field="*{population}" required="required"/>
+				<label>Language(s):</label><input type="text" name="language" th:field="*{language}" required="required"/>
+				<label>Flag (filename):</label><input type="text" name="flag" th:field="*{flag}" required="required"/>
+				<br/>
+				<input type="submit" value="Add"/><a th:href="@{'/'}" class="button">Cancel</a>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

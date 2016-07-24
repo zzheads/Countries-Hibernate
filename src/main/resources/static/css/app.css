@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700);
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Slab', serif;
+}
+
+header {
+	background-color: darkslategray;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+header h1 {
+	margin: 0;
+	padding: 10px 0;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+
+header h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+header h3 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.alert {
+	color: red;
+}
+
+.h3a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.selected {
+	color: deepskyblue;
+	text-decoration: none;
+}
+
+.notselected {
+	color: white;
+	text-decoration: none;
+}
+
+.label {
+	padding-right:40px;
+	margin-right: 40px;
+}
+
+
+.container {
+	margin: 0;
+	padding: 10px;
+}
+
+.country {
+	box-sizing: border-box;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 4px #ccc;
+	width: 45%;		
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+img {
+	max-width: 70%;
+}
+
+.country h4 {
+	text-align: center;
+	margin: 12px 0 4px 0;
+	font-weight: 300;
+	font-size: 1.0rem;
+}
+
+.country:nth-child(2n+1) {
+	margin-right: 8%;
+}
+
+.country a {
+	color: #444;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.country-details h2 {
+	text-transform: uppercase;
+	color: #444;
+	font-size: 3rem;
+	margin-top: 0;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #dedede;
+}
+
+.country-details .meta .stat {
+	margin-bottom: 20px;
+}
+
+.country-details .meta .stat h4 {
+	font-size: 1.8rem;
+	margin: 0 0 10px;
+	font-weight: 400;
+}
+
+.country-details .meta {
+	font-size: 1.3rem;
+	font-weight: 300;
+}
+
+.country-details .flag {
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 4px #ccc;
+}
+
+.country-details .flag::after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.country-details .meta ul {
+	margin-top: 0;
+	padding-left: 0px;
+}
+
+.country-details .meta ul {
+	list-style: none;
+}
+
+.country-details .meta ul li::before {
+	content:"\2713\0020";
+	color: #65AB8A;
+}
+
+/* ==========================================================================
+   Form Styles
+   ========================================================================== */
+
+.entry-comments form {
+	border-top: 1px solid #c1c1c1;
+	padding: 50px 0;
+	margin-top: 2px;
+}
+form label {
+	display: block;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-bottom: 6px;
+}
+form input[type=text],
+form input[type=number],
+form input[type=password],
+form textarea {
+	font-family: 'Roboto Slab', serif;
+	font-size: inherit;
+	border: 2px solid #e1e1e1;
+	line-height: 1.5em;
+	padding:5px 5px;
+	margin-bottom: 15px;
+	border-radius: 4px;
+	width: calc(50%);
+}
+.new-comment form input[type=text],
+.new-comment form textarea {
+	font-size: 15px;
+}
+form input[type=text]:focus,
+form input[type=password]:focus,
+form textarea:focus {
+	outline: 0;
+	border-color: #b1b1b1;
+}
+form input[type=text]:hover,
+form textarea:hover {
+	border-color: #b1b1b1;
+}
+.new-comment form textarea {
+	min-height: 125px;
+}
+.edit-entry form textarea,
+.new-entry form textarea {
+	min-height: 400px;
+}
+
+input[type=submit]
+{
+	background: gainsboro;
+	color: #222222;
+	padding: 8px 12px 7px 12px;
+	text-transform: uppercase;
+	border: 2px solid gray;
+	border-radius: 4px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 20px 15px 0 0;
+	width: 60px;;
+}
+input[type=submit]:hover {
+	border-color: #b1b1b1;
+}
+
+input[type=reset]
+{
+	padding: 8px 12px 7px 12px;
+	text-transform: uppercase;
+	border: 2px solid gray;
+	border-radius: 4px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 20px 15px 0 0;
+	width: 15%;
+	background: gainsboro;
+	color: #222222;
+}
+input[type=reset]:hover {
+	border-color: #b1b1b1;
+}
+
+
+/* ==========================================================================
+   Button Styles
+   ========================================================================== */
+
+.button {
+	background: gainsboro;
+	color: #222222;
+	display: block;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-bottom: 6px;
+	padding: 8px 12px 7px 12px;
+	border: 2px solid gray;
+	border-radius: 4px;
+	text-decoration: none;
+	width: 60px;;
+}
+
+.button:hover {
+	border-color: #b1b1b1;
+}
+
+.button.button-secondary {
+	background: transparent;
+	border-color: #000;
+	color: #000;
+}
+.button.button-round {
+	border-radius: 100px;
+	padding: 9px;
+	line-height: 1px;
+}
+.button:focus {
+	outline: 0;
+}
+
+
+
+
+
+@media screen and (min-width: 601px) {
+	header {
+		text-align: left;
+	}
+	.container {
+		max-width: 800px;
+		margin:0 auto;
+	}
+
+	.country-details h2 {
+		border-bottom: none;
+		font-size: 4rem;
+	}
+
+	.country-details .meta {
+		width: 65%;
+		float: left;
+	}
+
+	.country-details .meta .stat {
+		float: left;
+		width: 50%;
+	}
+
+	.country-details .flag {
+		float: right;
+		width: 35%;
+	}
+}

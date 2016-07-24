@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link rel="stylesheet" th:href="@{../css/app.css}" />
+	<link rel="stylesheet" th:href="@{../css/switch.css}" />
+
+	<title>Countries | home</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1><a th:href="@{/}">Countries of the World</a></h1>
+			<div th:switch="${sorted}">
+				<h3 th:case="name"><a th:href="@{/sorted_name}" class="selected">sorted by name </a><a th:href="@{/sorted_pop}">/ sorted by population</a> <a th:href="@{/add}">add new country </a> <a th:href="@{/clear}"> clear base</a></h3>
+				<h3 th:case="population"><a th:href="@{/sorted_name}">sorted by name /</a><a th:href="@{/sorted_pop}" class="selected"> sorted by population</a> <a th:href="@{/add}">add new country </a> <a th:href="@{/clear}"> clear base</a></h3>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div th:each="country : ${countries}" class="country">
+			<a th:href="@{'/' + ${country.page}}">
+				<img th:src="@{'/images/' + ${country.flag}}" th:alt="@{'Flag of ' + ${country.name}}"/>
+				<h4 th:text="${country.name}">Country Name</h4>
+			</a>
+		</div>
+	</div>
+</body>
+</html>

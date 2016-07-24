@@ -1,0 +1,75 @@
+.switch {
+    line-height: 1.0;
+}
+.switch input {
+    display: none;
+}
+.switch label {
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+    display: inline-block;
+    color: #888;
+    position: relative;
+    line-height: 25px;
+    cursor: pointer;
+    z-index: 10;
+}
+.switch label:first-of-type {
+    padding-right: 47.5px;
+}
+.switch label:last-of-type {
+    padding-left: 47.5px;
+}
+.switch input:checked + label {
+    color: #222;
+    cursor: default;
+}
+.switch input:checked + label:first-of-type {
+    padding-right: 17.5px;
+}
+.switch input:checked + label:last-of-type {
+    padding-left: 17.5px;
+}
+.switch label:first-of-type:after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    background: #999999;
+    background-color: #62bafb;
+    background-image: -webkit-linear-gradient(top, #0570bf, #62bafb);
+    background-image: -moz-linear-gradient(top, #0570bf, #62bafb);
+    background-image: -ms-linear-gradient(top, #0570bf, #62bafb);
+    background-image: -o-linear-gradient(top, #0570bf, #62bafb);
+    background-image: linear-gradient(top, #0570bf, #62bafb);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0570bf', endColorstr='#62bafb', GradientType=1);
+    box-shadow: inset 2px 3px 3px rgba(3, 68, 116, 0.8), inset 6px 12.5px 0px rgba(6, 132, 226, 0.8), inset 0 -1px 1px rgba(0, 0, 0, 0.33);
+    border-radius: 25px;
+    width: 50px;
+    height: 25px;
+    margin-left: 10px;
+}
+.switch label:first-of-type:before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    background: #cccccc;
+    background-color: #fafafa;
+    background-image: -webkit-linear-gradient(top, #e0e0e0, #fafafa);
+    background-image: -moz-linear-gradient(top, #e0e0e0, #fafafa);
+    background-image: -ms-linear-gradient(top, #e0e0e0, #fafafa);
+    background-image: -o-linear-gradient(top, #e0e0e0, #fafafa);
+    background-image: linear-gradient(top, #e0e0e0, #fafafa);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0e0e0', endColorstr='#fafafa', GradientType=1);
+    box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5), inset 0px 2px 0px rgba(255, 255, 255, 0.8), inset 0px -1px 0px rgba(255, 255, 255, 0.8), 0 0 1px #262626;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    right: -15.5px;
+    z-index: 5;
+}
+

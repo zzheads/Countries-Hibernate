@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" th:href="@{../css/app.css}" />
+
+	<title>Countries | delete</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1><a th:href="@{/}">Countries of the World</a></h1>
+			<h3 class="notselected">delete country</h3>
+		</div>
+	</header>
+	<div class="container">
+		<div class="country-details">
+			<h2 th:text="${country.name}">Country Name</h2>
+			<div class="meta">
+				<div class="stat">
+					<h4>Population</h4>
+					<span th:text="${country.populationString}">1,276,267,000</span>
+				</div>
+				<div class="stat">
+					<h4>Capital</h4>
+					<span th:text="${country.capital}">New Delhi</span>
+				</div>
+				<div class="stat">
+					<h4>Official Languages</h4>
+					<ul th:each="language : ${languages}">
+						<li th:text="${language}">Hindi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="flag">
+				<img th:src="@{'/images/' + ${country.flag}}" th:alt="@{'Flag of ' + ${country.name}}"/>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="country-details">
+			<h2> &nbsp;&nbsp;&nbsp;&nbsp;<br/></h2>
+
+					<form th:action="@{'/delete/' + ${country.page}}" th:object="${country}" method="post">
+						<h3 class="alert" th:text="@{'Sure want delete ' + ${country.name} + '?'}">Are you sure want delete it?</h3>
+						<input type="submit" th:object="${country}" value="Delete!"/><a th:href="@{'/' + ${country.page}}" class="button">Cancel</a>
+					</form>
+
+			</div>
+		</div>
+</body>
+</html>
